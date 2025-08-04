@@ -100,10 +100,10 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- TIP: Disable arrow keys in insert mode
-vim.keymap.set('i', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('i', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('i', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('i', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('i', '<left>', '<cmd>echo "NO ARROW KEYS BUDDY"<CR>')
+vim.keymap.set('i', '<right>', '<cmd>echo "NO ARROW KEYS BUDDY"<CR>')
+vim.keymap.set('i', '<up>', '<cmd>echo "NO ARROW KEYS BUDDY"<CR>')
+vim.keymap.set('i', '<down>', '<cmd>echo "NO ARROW KEYS BUDDY"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
