@@ -320,6 +320,13 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+      -- Curstom git mappings
+      vim.keymap.set('n', '<leader>gA', '<Cmd>terminal addcommitmsg.sh<CR>', { desc = '[g]it [A]dd All + Commit' })
+      vim.keymap.set('n', '<leader>ga', '<Cmd>!git add -A<CR>', { desc = '[g]it [a]dd All' })
+      vim.keymap.set('n', '<leader>gc', '<Cmd>!git commit<CR>', { desc = '[g]it [c]ommit' })
+      vim.keymap.set('n', '<leader>gl', '<Cmd>!git pull<CR>', { desc = '[g]it Pu[l]l' })
+      vim.keymap.set('n', '<leader>gs', '<Cmd>!git push<CR>', { desc = '[g]it Pu[s]h' })
+
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
@@ -463,11 +470,7 @@ require('lazy').setup({
           ---@param bufnr? integer some lsp support methods only in specific files
           ---@return boolean
           local function client_supports_method(client, method, bufnr)
-            if vim.fn.has 'nvim-0.11' == 1 then
-              return client:supports_method(method, bufnr)
-            else
-              return client.supports_method(method, { bufnr = bufnr })
-            end
+            return client:supports_method(method, bufnr)
           end
 
           -- The following two autocommands are used to highlight references of the
