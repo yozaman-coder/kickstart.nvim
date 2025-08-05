@@ -321,9 +321,9 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Curstom git mappings
-      vim.keymap.set('n', '<leader>gA', '<Cmd>terminal addcommitmsg.sh<CR>', { desc = '[g]it [A]dd All + Commit' })
+      vim.keymap.set('n', '<leader>gA', '<Cmd>terminal git add -A && git commit<CR>', { desc = '[g]it [A]dd All + Commit' })
       vim.keymap.set('n', '<leader>ga', '<Cmd>!git add -A<CR>', { desc = '[g]it [a]dd All' })
-      vim.keymap.set('n', '<leader>gc', '<Cmd>!git commit<CR>', { desc = '[g]it [c]ommit' })
+      vim.keymap.set('n', '<leader>gc', '<Cmd>terminal git commit<CR>', { desc = '[g]it [c]ommit' })
       vim.keymap.set('n', '<leader>gl', '<Cmd>!git pull<CR>', { desc = '[g]it Pu[l]l' })
       vim.keymap.set('n', '<leader>gs', '<Cmd>!git push<CR>', { desc = '[g]it Pu[s]h' })
 
