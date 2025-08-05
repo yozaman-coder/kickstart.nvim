@@ -323,7 +323,7 @@ require('lazy').setup({
       -- Curstom git mappings
       vim.keymap.set('n', '<leader>gA', ':terminal addcommitmsg.sh<CR>:startinsert<CR>', { desc = '[g]it [A]dd All + Commit' })
       vim.keymap.set('n', '<leader>ga', ':!git add -A<CR>', { desc = '[g]it [a]dd All' })
-      vim.keymap.set('n', '<leader>gc', ':terminal git commit<CR>:startinsert<CR>', { desc = '[g]it [c]ommit' })
+      vim.keymap.set('n', '<leader>gc', ':terminal commitmsg.sh<CR>:startinsert<CR>', { desc = '[g]it [c]ommit' })
       vim.keymap.set('n', '<leader>gl', ':!git pull<CR>', { desc = '[g]it Pu[l]l' })
       vim.keymap.set('n', '<leader>gs', ':!git push<CR>', { desc = '[g]it Pu[s]h' })
 
